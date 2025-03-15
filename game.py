@@ -92,9 +92,9 @@ class Game:
         self.lose_screen_anim = self.assets['screens/loseScreen'].copy()
         self.win_screen_anim = self.assets['screens/winScreen'].copy()
 
+        pygame.mixer.music.play()
 
     def run(self):
-        pygame.mixer.music.play()
         while True:
             self.display.fill((0,0,0))
             mouse_x, mouse_y = pygame.mouse.get_pos()
