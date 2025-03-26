@@ -16,7 +16,7 @@ class Player:
         self.set_action('idle/'+self.ori)
 
         self.footsteps = pygame.mixer.Sound('data/sfx/footsteps.wav')
-        self.footsteps.set_volume(0.2)
+        self.footsteps.set_volume(0.5)
 
         self.last_movement = [0,0]
 
