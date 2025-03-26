@@ -14,6 +14,7 @@ class Game:
         pygame.init()
         pygame.font.init()
         pygame.mixer.init()
+        SECONDS = 30
 
         self.my_font = pygame.freetype.SysFont('Comic Sans MS', 10)
 
@@ -47,7 +48,7 @@ class Game:
         self.screen = pygame.display.set_mode((self.x, self.y))
         self.display = pygame.Surface((self.x/8, self.y/8))
         self.clock = pygame.time.Clock()
-        self.timer = 7200
+        self.timer = SECONDS * 60
 
         self.movement = [False, False, False,  False]
 
@@ -75,7 +76,7 @@ class Game:
             'sfx/ambience' : pygame.mixer.music.load('data/sfx/ambience.mp3')
         }
 
-        pygame.mixer.music.set_volume(0.5)
+        pygame.mixer.music.set_volume(0.3)
 
         #This creates the player object
         self.player = Player(self, self.map_data[self.randmap]['spawn'], (14, 16))
